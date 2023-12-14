@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function validateForm() {
+            var name = document.forms["registrationForm"]["name"].value;
+            var password = document.forms["registrationForm"]["password"].value;
+            var confirmPassword = document.forms["registrationForm"]["confirmPassword"].value;
+            var email = document.forms["registrationForm"]["email"].value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (password == "") {
+                alert("Password must be filled out");
+                return false;
+            }
+
+            if (confirmPassword == "") {
+                alert("Please confirm your password");
+                return false;
+            }
+
+            if (password != confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<style>
+    .container
+    {
+        width: 400px;
+    }
+    body
+    {
+        background:linear-gradient(to bottom,#f17af1 35%,#73b7fb 65%);
+    }
+</style>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"href="#">Medical Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///E:/ASSIGENMENT/WEB/regstration.html"target="_blank">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///E:/ASSIGENMENT/WEB/loginpage.html"target="_blank">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="file:///E:/ASSIGENMENT/WEB/aboutus.html"target="_blank">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
+    <h1><center>Registration</center></h1>
+    <div class="container mt-5">
+        <form name="registrationForm" onsubmit="return validateForm()" method="post" action="file:///E:/ASSIGENMENT/WEB/medicinestock.html"target="_blank">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" name="email">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="Reset" class="btn btn-primary">Reset</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
